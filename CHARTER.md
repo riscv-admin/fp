@@ -1,7 +1,11 @@
 # Floating Point Charter
 
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+Ths SIG is an extension of the Upnpriv Committee and will develop a strategy, list of gaps, and prioritizations for floating point standards.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+There is a growing list of floating point standards beyond the base F, D, & Q extensions originally ratified in 2019. In 2021 we ratified Zfh. However floating point standards supporting targets from embedded to HPC and sectors from ML to Scientific to Finance are driving the adoption of other formats.
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+Other formats will include BFloat16, larger than 128 bit formats, TensorFloat-32, etc. We are not saying we will do all of these or all of them this year, but this is the venue to discuss them and decide whether to request spawning efforts to impplement them as extensions.
+
+This group will work with the Software Committees to ensure that any support needed in the ecosystem for them will be discussed between the groups.
+
+This SIG will be an ongoing group and continue its efforts with existing and emerging standards. It is expect for it to develop the srtaegy, list of gaps and priorites in stages over the rest of calendar year 2022.
