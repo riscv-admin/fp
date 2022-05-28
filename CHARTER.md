@@ -1,11 +1,26 @@
-# Floating Point Charter
+# Floating-Point (FP) SIG Charter
 
-Ths SIG is an extension of the Upnpriv Committee and will develop a strategy, list of gaps, and prioritizations for floating point standards.
+There is a large and growing interest in new FP formats and
+operations, beyond the IEEE-754/2008 standard incorporated in the
+standard RISC-V scalar F, D, and Q extensions ratified in 2019, and
+the Zfh/Zfhmin and vector extensions ratifed in 2021.
 
-There is a growing list of floating point standards beyond the base F, D, & Q extensions originally ratified in 2019. In 2021 we ratified Zfh. However floating point standards supporting targets from embedded to HPC and sectors from ML to Scientific to Finance are driving the adoption of other formats.
+The SIG is managed under the Unpriv Committee and will develop a
+strategy, list of gaps, and prioritizations for FP standard
+extensions.  The SIG will examine new FP formats in addition to
+further enhancements to IEEE FP standard.  This SIG is intended to
+provide a venue for community members to discuss and select which
+ideas should advance into eventual future standard extensions.
 
-Other formats will include BFloat16, larger than 128 bit formats, TensorFloat-32, etc. We are not saying we will do all of these or all of them this year, but this is the venue to discuss them and decide whether to request spawning efforts to impplement them as extensions.
+The FP SIG is managed under the Unpriv Committee, and is intended to
+develop the strategy, gaps, and prioritizations for all future FP
+enhancements for RISC-V.  We intend that this SIG will be ongoing and
+spawn or help spawn new TGs as appropriate to fulfil the strategy.  An
+important role of the SIG is prioritizing which extensions to pursue
+next and to limit the scope of new TGs to develop extensions that can
+be completed in bounded time with the constrained resources available.
 
-This group will work with the Software Committees to ensure that any support needed in the ecosystem for them will be discussed between the groups.
+This group will work with the Software Committees to ensure that any
+support needed in the ecosystem for them will be discussed between the
+groups.
 
-This SIG will be an ongoing group and continue its efforts with existing and emerging standards. It is expect for it to develop the srtaegy, list of gaps and priorites in stages over the rest of calendar year 2022.
