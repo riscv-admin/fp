@@ -8,7 +8,7 @@ the Zfh/Zfhmin and vector extensions ratifed in 2021.
 The FP SIG is managed under the Unpriv Committee, and is intended to
 develop the strategy, gaps, and prioritizations for all future FP
 enhancements for RISC-V.  The SIG will examine new FP formats in
-addition to further enhancements to IEEE FP standard.  This SIG is
+addition to further enhancements to the IEEE FP standard.  This SIG is
 intended to provide a venue for community members to discuss and
 select which ideas should advance into eventual future standard
 extensions.
