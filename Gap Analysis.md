@@ -8,7 +8,7 @@ We have adopted the strategy of considering all known number formats, but only i
 All information in this analysis has been discussed and reviewed by the FP SIG members.
 
 ## Current floating point support
-Note that all current all current extensions, except for the BF16 ones, are IEEE 754-2008 compliant.
+Note that all current extensions, except for the BF16 ones, are IEEE 754-2008 compliant.
 
 Ratified extensions currently support the following floating point formats:
 - F - Standard Extension for Single-Precision Floating-Point
