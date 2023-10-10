@@ -5,10 +5,10 @@ This analysis primarily focusses on support for the number format itself, but al
 
 We have adopted the strategy of considering all known number formats, but only identify number formats that have become or are becoming mainstream as gaps. The non-mainstream formats are monitored for relevant developments.
 
-All information in this analysis has been discussed and reviewed by the FP SIG members.
+All information is this analysis has been discussed and reviewed by the FP SIG members.
 
 ## Current floating point support
-Note that all current extensions, except for the BF16 ones, are IEEE 754-2008 compliant.
+Note that all current all current extensions, except for the BF16 ones, are IEEE 754-2008 compliant.
 
 Ratified extensions currently support the following floating point formats:
 - F - Standard Extension for Single-Precision Floating-Point
