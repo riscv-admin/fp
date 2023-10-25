@@ -19,11 +19,12 @@ Ratified extensions currently support the following floating point formats:
 - Zfinx, Zdinx, Zhinx, Zhinxmin - Standard Extensions for Floating-Point in Integer Registers
 - Zfa - Standard Extension for Additional Floating-Point Instructions
 - V, Zve64f, Zve64d - Vector extension support for floating-point
+- Zvfh, Zvfhmin - Vector extension support for half-precision floating point
+
+Draft extensions currently support the following floating point formats:
 - Zfbfmin - BF16 extension for data-transfer and conversion instructions only
 - Zvfbmin, Zvbfwma - Vector extension support for BF16, data-transfer and conversion, or widening multiply-add only
 
-Draft extensions currently support the following floating point formats:
-- Zvfh, Zvfhmin - Vector extension support for half-precision floating point
 
 Placeholders for future extensions supporting floating point formats:
 - L - Standard Extension for Decimal Floating-Point
