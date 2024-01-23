@@ -1,4 +1,4 @@
-# FP SIG - Gap Analysis [Draft]
+# FP SIG - Gap Analysis
 There are a large number of floating point formats. The FP SIG is tasked with exploring the landscape and identifying gaps in the current support for floating point by RISC-V.
 
 This analysis primarily focusses on support for the number format itself, but also includes the ecosystem, such as software support and verification support, and details such as rounding modes and subnormal support.
@@ -11,19 +11,19 @@ All information is this analysis has been discussed and reviewed by the FP SIG m
 Note that all current all current extensions, except for the BF16 ones, are IEEE 754-2008 compliant.
 
 Ratified extensions currently support the following floating point formats:
-- F - Standard Extension for Single-Precision Floating-Point
-- D - Standard Extension for Double-Precision Floating-Point
-- Q - Standard Extension for Quad-Precision Floating-Point
-- Zfh - Standard Extensions for Half-Precision Floating-Point
+- F - Standard Extension for Single-Precision Floating-Point (F32, FP32, binary32, F1.8.23)
+- D - Standard Extension for Double-Precision Floating-Point (F64, FP64, binary64, F1.11.52)
+- Q - Standard Extension for Quad-Precision Floating-Point (F128, FP128, binary128, F1.15.113)
+- Zfh - Standard Extensions for Half-Precision Floating-Point (F16, FP16, binary16, F1.5.11)
 - Zfhmin - Standard Extension for Minimal Half-Precision Floating-Point Support, data transfer and conversion instructions only
 - Zfinx, Zdinx, Zhinx, Zhinxmin - Standard Extensions for Floating-Point in Integer Registers
 - Zfa - Standard Extension for Additional Floating-Point Instructions
 - V, Zve64f, Zve64d - Vector extension support for floating-point
-- Zfbfmin - BF16 extension for data-transfer and conversion instructions only
-- Zvfbmin, Zvbfwma - Vector extension support for BF16, data-transfer and conversion, or widening multiply-add only
+- Zvfh, Zvfhmin - Vector extension support for half-precision floating point
+- Zfbfmin - BF16 extension for data-transfer and conversion instructions only (BF16, bfloat16, F1.8.7)
 
 Draft extensions currently support the following floating point formats:
-- Zvfh, Zvfhmin - Vector extension support for half-precision floating point
+- Zvfbmin, Zvbfwma - Vector extension support for BF16, data-transfer and conversion, or widening multiply-add only
 
 Placeholders for future extensions supporting floating point formats:
 - L - Standard Extension for Decimal Floating-Point
@@ -45,11 +45,13 @@ Non-IEEE number formats are currently still considered a research topic not requ
 #### Use cases
 In terms of usage we roughly identify the following categories: generic, historic, graphics, and AI/ML.
 
+The generic formats are not optimised to a specific use case and for the most part align with the IEEE formats. As a general purpose ISA these are of primary interest to RISC-V.
+
 The historic formats pre-date the IEEE 754 standardisation and therefore have only niche use cases. Ratified support by RISC-V is thus not necessary.
 
 Graphics formats are usually supported on GPUs which currently is not a common use case for RISC-V, and hence doesn't require mainstream support.
 
-AI/ML formats have blossomed recently in the quickly developing field. These formats therefore have an increased interest from the community and are tracked more closely. Two formats are notable; BF16 is supported by most ISAs, such as Intel AVX-512, ARMv8.2, or Power ISA v3.1, and FP8 is being standardised by an IEEE working group (P3109).
+AI/ML formats have blossomed recently in the quickly developing field. These formats therefore have an increased interest from the community and are tracked more closely. Two formats are notable; BF16 is supported by most ISAs, such as Intel AVX-512, ARMv8.2, or Power ISA v3.1, and FP8 is being standardised by an IEEE working group (P3109) (binary8p3 and binary8p4) and OpenCompute (OFP8 E5M2 and E4M3).
 
 
 ### Mainstream
@@ -61,7 +63,7 @@ BF16 is of interest to the wider community, and already has ratified support for
 
 FP8 is on track to be a ratified IEEE standard and therefore also considered a mainstream format.
 
-Note: There are more than one FP8 format being considered for ratification. There are currently gathered under the name "binary8" formats [P3109 working group interim report](https://github.com/P3109/Public/blob/main/Shared%20Reports/P3109%20WG%20Interim%20report.pdf). 
+Note: There are more than one FP8 format being considered for ratification. There are currently gathered under the name "binary8" formats [P3109 working group interim report](https://github.com/P3109/Public/blob/main/Shared%20Reports/P3109%20WG%20Interim%20report.pdf). For the alternative [Open Compute OFP8](https://www.opencompute.org/documents/ocp-8-bit-floating-point-specification-ofp8-revision-1-0-2023-12-01-pdf-1) format similarly two variants are defined.
 
 ## Ecosystem
 It has been highlighted that programming languages have little support for floating point numbers other than single and double precision.
@@ -77,6 +79,10 @@ The FP SIG has highlighted the following gaps in floating point support for RISC
 The FP SIG has considered the following as potential gaps that will be monitored:
 - Decimal floating point support for financial applications
 - The scientific computing community has expressed initial interest in even higher precision floating point such as octal precision and variable precision
+
+The FP SIG has identified the following as potential gaps to explore further:
+- Evaluation of format-agnostic (floating point) instructions
+- Guidance on creating custom floating point extensions
 
 ## Recommendation
 The current recommendation is:
