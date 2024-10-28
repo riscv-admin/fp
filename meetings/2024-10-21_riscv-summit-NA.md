@@ -18,7 +18,7 @@ Andrew’s proposal for reduced precision support: https://lists.riscv.org/g/sig
 FP4 / Int4: “Zvfmx4min, which adds two instructions, `vfext.vf2` and `vfext.vf4`”
 * Putting aside IEEE P3109's binary8 for now (because of no commercial bases for it)
 * Binary8 may stay separate from OFP8
-* The cheer number of FP8 formats will warrant for adding only conversions and not actual conversions
+* The cheer number of FP8 formats will warrant for adding only conversions and not actual operations
 * Conversion to BF16 because of exponent (half/fp16 is too limited when we consider an actual product of OFP8 operands)
 * Half precision target could be defined in parallel but in separate extensions
 
